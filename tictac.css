@@ -1,3 +1,6 @@
+body{
+  background: blue;
+}
 td {
   border:2px solid pink;
   height:100px;
@@ -13,7 +16,7 @@ table {
   position:absolute;
   left:50%;
   margin-left:-155px;
-  top:50px;
+  top:150px;
 }
 
 table tr:first-child td {
