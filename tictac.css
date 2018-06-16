@@ -1,5 +1,44 @@
-body{
-  background: blue;
+#bodyTicTac{/*body tictac.html*/
+  background: rgba(172,154,146,0.8)
+}
+#bodyHome{/*body home.html*/
+  background-color: rgba(142,211,227,0.7);
+}
+#h1Home{
+  position: relative;
+ text-align: center;
+ font-family: 'Bangers', cursive;
+ font-size: 130px;
+ color: rgba(150,103,131,1);
+ text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+#h1TicTac{
+  font-family: 'Shrikhand', cursive;
+  font-size: 125px;
+  color: rgba(100,140,169,0.9);
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+
+}
+a:hover{/*link  h2 to tictac.html*/
+  text-decoration:none ; 
+ } 
+#h2Home:hover{/*Movement of h2 from home.html*/
+  color:rgb(137, 86, 202);/*color for mouseover*/
+  margin-top: -16px;
+   transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+}
+h2{/*PLAY in home.html*/
+  font-size: 150px;
+  color:red;
+  text-align: center;
+  padding-top: 10%;
+  font-family: 'Shrikhand', cursive;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
+
 }
 td {
   border:2px solid pink;
@@ -16,7 +55,7 @@ table {
   position:absolute;
   left:50%;
   margin-left:-155px;
-  top:150px;
+  top:270px;
 }
 
 table tr:first-child td {
@@ -34,7 +73,23 @@ table tr td:first-child {
 table tr td:last-child {
   border-right:0;
 }
-
+button{
+  position: relative;
+  font-family: 'Shrikhand', cursive;
+  color:black;
+  text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
+  background: rgb(65, 61, 104);
+  width: 10%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 50px;
+}
+button:hover{
+  background: white;
+  color:black;
+  padding-left: 12px;
+}
+ 
 .endgame {
   display: none;
   width: 200px;
