@@ -92,6 +92,7 @@ table {
   left:50%;
   margin-left:-260px;
   top:25%;
+  
 }
 
 table tr:first-child td {
@@ -143,3 +144,44 @@ button:hover{/*hover of play button on tictac.html*/
   color: white;
   font-size: 2em;
 }
+
+
+@font-face {
+  font-family: 'digital_dream';
+  src: url('digital_dream/digitaldreamfatskew-webfont.eot');
+  src: url('digital_dream/digitaldreamfatskew-webfont.eot?#iefix') format('embedded-opentype'),
+       url('digital_dream/digitaldreamfatskew-webfont.woff2') format('woff2'),
+       url('digital_dream/digitaldreamfatskew-webfont.woff') format('woff'),
+       url('digital_dream/digitaldreamfatskew-webfont.ttf') format('truetype'),
+       url('digital_dream/digitaldreamfatskew-webfont.svg#digital_dream_fat_skewregular') format('svg');
+ 
+}		
+#cronometro { 
+  padding:10px;
+  border: 5px #7c7bff double;
+  width: 200px;
+  text-align: center;
+  background-color: rgb(119, 0, 0); 
+  border-radius: 15px;
+  float: right;
+  margin: 1em 3em 1em 3em; 
+  margin-top: -7%;
+}
+#reloj { 
+  padding: 5px 10px; 
+  width: 90% ;
+  border: 1px solid black; 
+  font: normal 1em digital_dream, europa, arial; 
+  text-align: center; 
+  margin: 4px; 
+  background-color: #f0ffff; 
+  border-radius: 3px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Shrikhand', cursive;
+  color:black;
+ text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
+  font-size: 25px;
+ 
+  }
+/*#cronometro [type=button]  { margin: 4px; font: normal 9pt arial; width: 70px; } */
