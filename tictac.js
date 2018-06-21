@@ -91,27 +91,25 @@ function checkTie() {
 }
 
 
-//TIMER
+/////TIMER//////
 window.onload = function () {
 
   visor = document.getElementById("reloj"); //locate clock screen
   //starts variables:
-  var motion = 0; //timer control
   var cro = 0; //Initial status of the chronometer.
 
 
 }
 //Starts the chrono
 function start_time() {
-  emp = new Date() //Date at the start moment
+  ini = new Date() //Date at the start moment
   elcrono = setInterval(time, 10); //timer function.
-  motion = 1 //we indicate that it has been launched.
 }
 //timer function			
 function time() {
-  actual = new Date(); //fecha a cada instante
-  //tiempo del crono (cro) = fecha instante (actual) - initial date (emp)
-  cro = actual - emp; //milliseconds elapsed.
+  current = new Date(); //fecha a cada instante
+  //tiempo del crono (cro) = fecha instante (current) - initial date (ini)
+  cro = current - ini; //milliseconds elapsed.
   cr = new Date(); // passed the num. from milliseconds to date object.
   cr.setTime(cro);
   //get the diferent formats of dates
@@ -121,7 +119,7 @@ function time() {
   sg = cr.getSeconds(); //seconds 
   mn = cr.getMinutes(); //minutes
 
-  //Always puts 2 cipher	 
+   
   if (cs < 10) { cs = "0" + cs; }
   if (sg < 10) { sg = "0" + sg; }
   if (mn < 10) { mn = "0" + mn; }
@@ -130,6 +128,5 @@ function time() {
 }
 //Stops the clock
 function stop_timer() {
-  clearInterval(elcrono); //stops the crono
-  motion = 0; //
+  clearInterval(elcrono); //stops the chrono
 }
