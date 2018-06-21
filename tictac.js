@@ -16,7 +16,7 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 
 function startGame() {
-  document.querySelector(".endgame").style.display = "none";
+ document.querySelector(".endgame").style.display = "none";
   origBoard = Array.from(Array(9).keys());
   for (var i = 0; i < cells.length; i++) {
     cells[i].innerText = '';
@@ -89,12 +89,20 @@ function checkTie() {
   }
   return false;
 }
+//change text on button play
+var valor = true
+function FbotonOn() {
+  var uno = document.getElementById('botonOn');
+  valor?uno.innerText = "Play again":uno.innerText = "Play";
+ // valor=!valor//always keep on false for show play again after clic de 1 time
+}
+
 
 
 /////TIMER//////
 window.onload = function () {
 
-  visor = document.getElementById("reloj"); //locate clock screen
+  visor = document.getElementById("clock"); //locate clock screen
   //starts variables:
   var cro = 0; //Initial status of the chronometer.
 
@@ -103,12 +111,11 @@ window.onload = function () {
 //Starts the chrono
 function start_time() {
   ini = new Date() //Date at the start moment
-  elcrono = setInterval(time, 10); //timer function.
+  clock = setInterval(time, 10); //timer function.
 }
 //timer function			
 function time() {
   current = new Date(); //fecha a cada instante
-  //tiempo del crono (cro) = fecha instante (current) - initial date (ini)
   cro = current - ini; //milliseconds elapsed.
   cr = new Date(); // passed the num. from milliseconds to date object.
   cr.setTime(cro);
@@ -128,5 +135,5 @@ function time() {
 }
 //Stops the clock
 function stop_timer() {
-  clearInterval(elcrono); //stops the chrono
+  clearInterval(clock); //stops the chrono
 }
