@@ -58,17 +58,18 @@ a:hover{/*link  h2 to tictac.html*/
   font-family: 'Passero One', cursive;
   color: greenyellow;
 text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
-margin-left: 5%;
+margin-left: 30%;
 }
 #h2Rules{/*h2 Rules*/
   font-family: 'Passero One', cursive;
   font-size: 180px;
 text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
 color: greenyellow;
+padding-left: 15%;
+padding-top: 10%;
 }
 #rulesContainer{/*Rules div container*/
-  margin-top: 10%;
-  margin-left: 35%;
+ 
  
 }
 
@@ -78,10 +79,11 @@ td {
   width:180px;
   text-align:center;
   vertical-align:middle;
-  font-family:"Comic Sans MS", cursive;
+  font-family:"Shrikhand", cursive;
   cursor:pointer;
-  
-
+  font-size: 120px;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+   color:white;
 }
 
 table {
@@ -113,7 +115,7 @@ button{/*play button on tictac.html*/
   color:black;
   text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
   background: rgb(65, 61, 104);
-  width: 12%;
+  width: 15%;
   border-radius: 20px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   font-size: 50px;
