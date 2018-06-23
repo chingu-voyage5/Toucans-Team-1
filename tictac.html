@@ -37,14 +37,25 @@
     </div>
     <div>
       <button onclick="startGame(); start_time(); FbotonOn()" id="botonOn">Play</button>
+      <div id="scoreText">
+        <h1 id="h1Score">SCORE</h1>
+        <h2 id="h2Score">YOU &nbsp MACHINE</h2>
+        <div id="scoreBoard">
+          0 - 0
+        </div>
+        
+        </div>
+      </div>
+      <div> <button onclick="resetScore();startGame()" id="buttonReset">Reset</button>
     </div>
     <div id="cronometro">
+      <h2 id="h2Time">Time</h2>
       <div id="clock">
         00 : 00
-        </div>
-        </div>
-        <script src="tictac.js"></script>
+      </div>
+    </div>
+    <script src="tictac.js"></script>
   </body>
-  </div>
+</div>
 
 </html>

@@ -68,10 +68,6 @@ color: greenyellow;
 padding-left: 15%;
 padding-top: 10%;
 }
-#rulesContainer{/*Rules div container*/
- 
- 
-}
 
 td {
   border:10px solid rgba(46, 11, 11,0.9);
@@ -121,13 +117,62 @@ button{/*play button on tictac.html*/
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   font-size: 30px;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 button:hover{/*hover of play button on tictac.html*/
   background: rgb(53, 222, 228);
   color:black;
   padding-left: 15px;
 }
+#scoreText{
+  position: relative;
+  font-family: 'Shrikhand', cursive;
+  color:black;
+  text-align: center;
+  text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
+  background: rgb(78, 116, 173);
+  width: 23%;
+  padding-top: 10%;
+  padding-bottom: 2%;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 95px;
+  margin-left: 1%;
+  margin-top: 2%;
+  border-radius: 5%;
+  border: 5px black double;
+}
+#h1Score{
+  margin-top: -40%;
+  font-size: 80px;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue;
+
+}
+#h2Score{
+  margin-bottom: 13%;
+  font-size: 33px;
+}
+#scoreBoard{
+  margin-left: -10%;
+  margin-top: -20%;
+
+}
+#buttonReset{
+  position: relative;
+  font-family: 'Shrikhand', cursive;
+  color:black;
+  text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
+  background: red;
+  width: 20%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 30px;
+  margin-left: 2%; 
+  margin-top:-100%; 
+}
+
+
  
 .endgame {
   display: none;
@@ -157,6 +202,7 @@ button:hover{/*hover of play button on tictac.html*/
  
 }		
 #cronometro { 
+  position: relative;
   padding:10px;
   border: 5px #7c7bff double;
   width: 200px;
@@ -164,8 +210,9 @@ button:hover{/*hover of play button on tictac.html*/
   background-color: rgb(119, 0, 0); 
   border-radius: 15px;
   float: right;
-  margin: 1em 3em 1em 3em; 
-  margin-top: -7%;
+  padding-top: -10%;
+  margin: 1em 3em 3em 3em;
+  margin-top:-25%;
 }
 #clock { 
   padding: 5px 10px; 
@@ -182,6 +229,16 @@ button:hover{/*hover of play button on tictac.html*/
   color:black;
  text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
   font-size: 25px;
- 
-  }
-/*#cronometro [type=button]  { margin: 4px; font: normal 9pt arial; width: 70px; } */
+ }
+#h2Time{ 
+ font: normal 1em digital_dream, europa, arial; 
+  text-align: center; 
+  margin: 4px; 
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Shrikhand', cursive;
+  color:black;
+ /*text-shadow: 5px 5px 50px black, 0 0 25px yellow, 0 0 50px darkblue;*/
+  text-shadow: 0 0 13px white, 0 0 5px #0000FF;
+  font-size: 55px;
+}

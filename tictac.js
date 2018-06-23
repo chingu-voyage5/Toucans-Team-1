@@ -51,7 +51,8 @@ function checkWin(board, player) {
   }
   return gameWon;
 }
-
+var youWin = 0;
+var machineWin = 0;
 function gameOver(gameWon) {
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
@@ -60,8 +61,19 @@ function gameOver(gameWon) {
   for (var i = 0; i < cells.length; i++) {
     cells[i].removeEventListener('click', turnClick, false);
   }
-  declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+  
+  declareWinner(gameWon.player == huPlayer ? youWin++ : machineWin++);//According to who won, the variable increases
+score = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
+score.innerHTML = youWin +" - "+ machineWin;
+declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
   stop_timer();
+}
+function resetScore(){
+  score = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
+  youWin=0;
+  machineWin=0;
+  score.innerHTML = youWin +" - "+ machineWin;
+
 }
 function declareWinner(who) {
   document.querySelector(".endgame").style.display = "block";
@@ -89,6 +101,8 @@ function checkTie() {
   }
   return false;
 }
+
+
 //change text on button play
 var valor = true
 function FbotonOn() {
@@ -96,6 +110,7 @@ function FbotonOn() {
   valor?uno.innerText = "Play again":uno.innerText = "Play";
  // valor=!valor//always keep on false for show play again after clic de 1 time
 }
+
 
 
 
