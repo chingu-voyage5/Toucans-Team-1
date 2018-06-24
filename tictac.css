@@ -1,10 +1,12 @@
 #bodyTicTac{/*body tictac.html*/
   background: rgba(172,154,146,0.8)
 }
-#bodyHome{/*body home.html*/
+#bodyIndex{/*body home.html*/
   background-color: rgba(142,211,227,0.7);
+  border: 5px black double;
+
 }
-#h1Home{
+#h1Index{
   position: relative;
  text-align: center;
  font-family: 'Bangers', cursive;
@@ -23,7 +25,7 @@
 a:hover{/*link  h2 to tictac.html*/
   text-decoration:none ; 
  } 
-#h2Home:hover{/*Movement of h2 from home.html*/
+#h2Index:hover{/*Movement of h2 from home.html*/
   color:darkblue;/*color for mouseover*/
   margin-top: -16px;
    transition: all .2s;
@@ -33,7 +35,7 @@ a:hover{/*link  h2 to tictac.html*/
   text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 5px darkblue;
 
 }
-#h2Home{/*PLAY h2 in home.html*/
+#h2Index{/*PLAY h2 in home.html*/
   font-size: 100px;
   color:rgb(13, 189, 36);
   text-align: center;
@@ -43,7 +45,7 @@ a:hover{/*link  h2 to tictac.html*/
   
 }
 
-#homePlay{/*container div of PLAY  h2 on home.html*/
+#indexPlay{/*container div of PLAY  h2 on home.html*/
   margin-top: 10%;
   background-color: red;
   width: 50%;
@@ -52,22 +54,8 @@ a:hover{/*link  h2 to tictac.html*/
   margin-left: 25%;
   box-shadow: 10px 10px 5px darkmagenta;
 }
-#rules {/*Rules list*/
-  list-style-type: none;
-  font-size: 70px;
-  font-family: 'Passero One', cursive;
-  color: greenyellow;
-text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
-margin-left: 30%;
-}
-#h2Rules{/*h2 Rules*/
-  font-family: 'Passero One', cursive;
-  font-size: 180px;
-text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
-color: greenyellow;
-padding-left: 15%;
-padding-top: 10%;
-}
+
+
 
 td {
   border:10px solid rgba(46, 11, 11,0.9);
