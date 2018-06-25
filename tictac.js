@@ -77,7 +77,8 @@ function resetScore(){
   sg=0;
   cs=0;
   visor.innerHTML = sg + " 0: 0" + cs;
-
+  document.getElementById('showTable').style.display = "none";
+  document.getElementById('showFakeTable').style.display = "block";
 
 }
 function declareWinner(who) {
@@ -156,4 +157,9 @@ function time() {
 //Stops the clock
 function stop_timer() {
   clearInterval(clock); //stops the chrono
+}
+function showDiv() {
+  document.getElementById('showTable').style.display = "block";
+  document.getElementById('showFakeTable').style.display = "none";
+
 }

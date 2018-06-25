@@ -19,7 +19,7 @@
     <h1 class="text-center" id="h1TicTac">TIC-TAC-TOE</h1>
     
     
-    <table>
+    <table style="display:none;" id="showTable" >
       <tr>
         <td class="cell" id="0"></td>
         <td class="cell" id="1"></td>
@@ -36,13 +36,32 @@
         <td class="cell" id="8"></td>
       </tr>
     </table>
+
+    <table style="display:block;" id="showFakeTable" >
+      <tr>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+      </tr>
+      <tr>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+      </tr>
+      <tr>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+        <td class="cell" ></td>
+      </tr>
+    </table>
+
     <div class="endgame">
       <div class="text"></div>
     </div>
 
 
     <div>
-      <button onclick="startGame(); start_time(); FbotonOn()" id="botonOn">Play</button>
+      <button onclick="startGame(); start_time(); FbotonOn();showDiv()" id="botonOn">Play</button>
       <div id="scoreText">
         <h1 id="h1Score">SCORE</h1>
         <h2 id="h2Score"> YOU&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMACHINE</h2>
