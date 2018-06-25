@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <title>Tic Tac Toe</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="tictac.css">
   <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
 
@@ -15,6 +18,8 @@
 
   <body id="bodyTicTac">
     <h1 class="text-center" id="h1TicTac">TIC-TAC-TOE</h1>
+    
+    
     <table>
       <tr>
         <td class="cell" id="0"></td>
@@ -35,6 +40,8 @@
     <div class="endgame">
       <div class="text"></div>
     </div>
+
+
     <div>
       <button onclick="startGame(); start_time(); FbotonOn()" id="botonOn">Play</button>
       <div id="scoreText">
@@ -43,17 +50,21 @@
         <div id="scoreBoard">
           0 - 0
         </div>
-        
-        </div>
+
       </div>
-      <div> <button onclick="resetScore();startGame()" id="buttonReset">Reset</button>
     </div>
+    <div>
+      <button onclick="resetScore();startGame()" id="buttonReset">Reset</button>
+    </div>
+
+
     <div id="cronometro">
       <h2 id="h2Time">Time</h2>
       <div id="clock">
         00 : 00
       </div>
     </div>
+
     <script src="tictac.js"></script>
   </body>
 </div>

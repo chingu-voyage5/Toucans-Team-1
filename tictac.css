@@ -3,8 +3,7 @@
 }
 #bodyIndex{/*body home.html*/
   background-color: rgba(142,211,227,0.7);
-  border: 5px black double;
-
+  
 }
 #h1Index{
   position: relative;
@@ -13,7 +12,7 @@
  font-size: 140px;
  color: rgba(150,103,131,1);
  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-
+margin-top: 2%;
 }
 #h1TicTac{
   font-family: 'Shrikhand', cursive;
@@ -46,7 +45,7 @@ a:hover{/*link  h2 to tictac.html*/
 }
 
 #indexPlay{/*container div of PLAY  h2 on home.html*/
-  margin-top: 10%;
+  margin-top: 0%;
   background-color: red;
   width: 50%;
   height: 10%;
@@ -54,7 +53,11 @@ a:hover{/*link  h2 to tictac.html*/
   margin-left: 25%;
   box-shadow: 10px 10px 5px darkmagenta;
 }
+#imageIndex{
 
+  margin-top: 10%;
+  width:50%;
+}
 
 
 td {

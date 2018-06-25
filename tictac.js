@@ -73,6 +73,11 @@ function resetScore(){
   youWin=0;
   machineWin=0;
   score.innerHTML = youWin +" - "+ machineWin;
+  visor = document.getElementById("clock");
+  sg=0;
+  cs=0;
+  visor.innerHTML = sg + " 0: 0" + cs;
+
 
 }
 function declareWinner(who) {
