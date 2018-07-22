@@ -316,7 +316,7 @@ button:hover{/*hover of play button on tictac.html*/
   td {
     border:7px solid rgba(46, 11, 11,0.9);
     height:90px;
-    width:90px;
+    width:80px;
     text-align:center;
     vertical-align:middle;
     font-family:"Shrikhand", cursive;
@@ -329,8 +329,8 @@ button:hover{/*hover of play button on tictac.html*/
   table {
     border-collapse: collapse;
     position:absolute;
-    left:85%;
-    top:55%;
+    left:90%;
+    top:50%;
     
   }
   
@@ -359,15 +359,28 @@ button:hover{/*hover of play button on tictac.html*/
     border-radius: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 20px;
-    margin-left: 27%;
+    margin-left: 4%;
     margin-top: -5%;
   }
   button:hover{/*hover of play button on tictac.html*/
     background: rgb(53, 222, 228);
     color:black;
     transform: translateY(-5px);
-  
   }
+  #buttonReset{
+    position: relative;
+    font-family: 'Shrikhand', cursive;
+    color:black;
+    text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
+    background: red;
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 20px;
+    margin-left: 55%; 
+    top:-180px;
+ }
+  
   #scoreText{
     position: relative;
     font-family: 'Shrikhand', cursive;
@@ -381,7 +394,6 @@ button:hover{/*hover of play button on tictac.html*/
     font-size: 50px;
     margin-left: 0%;
     margin-top: 2%;
-   
     border: 5px black double;
   }
   #h1Score{
@@ -400,29 +412,16 @@ button:hover{/*hover of play button on tictac.html*/
     margin-top:-28%;
    font-size: 45px;
   }
-  #buttonReset{
-    position: relative;
-    font-family: 'Shrikhand', cursive;
-    color:black;
-    text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
-    background: red;
-    width: 45%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    font-size: 20px;
-    margin-left: 27%; 
-    
-  }
   
   
    
   .endgame {
     display: none;
     width: 110px;
-    top: 425px;
+    top: 415px;
     background-color: purple;
     position: absolute;
-    left: 62%;
+    left: 65%;
     padding-top: 50px;
     text-align: center;
     border-radius: 5px;
@@ -449,7 +448,7 @@ button:hover{/*hover of play button on tictac.html*/
     background-color: rgb(35, 119, 197); 
     border-radius: 15px;
     float: right;
-    margin-top:-54%;
+    margin-top:-53%;
     margin-right: 0%;
     padding-bottom: 21px;
   }
