@@ -375,8 +375,7 @@ button:hover{/*hover of play button on tictac.html*/
     text-align: center;
     text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
     background: rgb(35, 119, 197);
-    width:55%;
-    height:155%;
+    width:57%;
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 50px;
@@ -388,18 +387,18 @@ button:hover{/*hover of play button on tictac.html*/
   #h1Score{
     margin-top: -10%;
     font-size: 30px;
-    color:white;
+    color: white;
     text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue;
   
   }
   #h2Score{
-    margin-bottom: 13%;
+    margin-bottom: 20%;
     font-size: 15px;
   }
   #scoreBoard{
     margin-left:-5%;
-    margin-top:-15%;
-  font-size: 45px;
+    margin-top:-28%;
+   font-size: 45px;
   }
   #buttonReset{
     position: relative;
@@ -407,11 +406,11 @@ button:hover{/*hover of play button on tictac.html*/
     color:black;
     text-shadow: 1px 1px 2px white, 0 0 25px yellow, 0 0 5px darkblue;
     background: red;
-    width: 25%;
+    width: 45%;
     border-radius: 20px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     font-size: 20px;
-    margin-left: 13%; 
+    margin-left: 27%; 
     
   }
   
@@ -450,8 +449,9 @@ button:hover{/*hover of play button on tictac.html*/
     background-color: rgb(35, 119, 197); 
     border-radius: 15px;
     float: right;
-    margin-top:-57%;
+    margin-top:-54%;
     margin-right: 0%;
+    padding-bottom: 21px;
   }
   #clock { 
     padding: 5px 10px; 
