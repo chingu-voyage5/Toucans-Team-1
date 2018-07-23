@@ -16,7 +16,7 @@ const cells = document.querySelectorAll('.cell');
 startGame();
 
 function startGame() {
- document.querySelector(".endgame").style.display = "none";
+  document.querySelector(".endgame").style.display = "none";
   origBoard = Array.from(Array(9).keys());
   for (var i = 0; i < cells.length; i++) {
     cells[i].innerText = '';
@@ -28,7 +28,7 @@ function startGame() {
 function turnClick(square) {
   if (typeof origBoard[square.target.id] == 'number') {
     turn(square.target.id, huPlayer);
-    if (!checkTie()) turn(bestSpot(), aiPlayer);
+    if (!checkWin(origBoard, huPlayer) && !checkTie()) turn(bestSpot(), aiPlayer);
   }
 }
 
@@ -51,8 +51,10 @@ function checkWin(board, player) {
   }
   return gameWon;
 }
+
 var youWin = 0;
 var machineWin = 0;
+
 function gameOver(gameWon) {
   for (let index of winCombos[gameWon.index]) {
     document.getElementById(index).style.backgroundColor =
@@ -61,21 +63,21 @@ function gameOver(gameWon) {
   for (var i = 0; i < cells.length; i++) {
     cells[i].removeEventListener('click', turnClick, false);
   }
-  
   declareWinner(gameWon.player == huPlayer ? youWin++ : machineWin++);//According to who won, the variable increases
-score = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
-score.innerHTML = youWin +" - "+ machineWin;
-declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+  scorePoints = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
+  scorePoints.innerHTML = youWin + " - " + machineWin;
+
+  declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
   stop_timer();
 }
-function resetScore(){
-  score = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
-  youWin=0;
-  machineWin=0;
-  score.innerHTML = youWin +" - "+ machineWin;
+function resetScore() {
+  scorePoints = document.getElementById("scoreBoard");//put scoreBoard in tictac.html
+  youWin = 0;
+  machineWin = 0;
+  scorePoints.innerHTML = youWin + " - " + machineWin;
   visor = document.getElementById("clock");
-  sg=0;
-  cs=0;
+  sg = 0;
+  cs = 0;
   visor.innerHTML = sg + " 0: 0" + cs;
   document.getElementById('showTable').style.display = "none";
   document.getElementById('showFakeTable').style.display = "block";
@@ -88,12 +90,15 @@ function declareWinner(who) {
 }
 
 function emptySquares() {
-  return origBoard.filter(s => typeof s == 'number');
+  return origBoard.filter(s => typeof s === 'number');
 }
 
 function bestSpot() {
   return emptySquares()[0];
 }
+/*function bestSpot(){
+  return minimax(origBoard,aiPlayer).index;
+}*/
 
 function checkTie() {
   if (emptySquares().length == 0) {
@@ -113,10 +118,57 @@ function checkTie() {
 var valor = true
 function FbotonOn() {
   var uno = document.getElementById('botonOn');
-  valor?uno.innerText = "Play again":uno.innerText = "Play";
- // valor=!valor//always keep on false for show play again after clic de 1 time
+  valor ? uno.innerText = "Play again" : uno.innerText = "Play";
+  // valor=!valor//always keep on false for show play again after clic de 1 time
 }
 
+function minimax(newBoard, player){
+  var availSpots = emptySquares();
+
+  if(checkWin(newBoard,huPlayer)){
+    return{score : -10};
+  }else if(checkWin(newBoard,aiPlayer)){
+    return{score : 10};
+  }else if((availSpots.lenght === 0)){
+    return{score : 0};
+  }
+  var moves=[];
+  for(var i = 0; i < availSpots.length; i++){
+    var move ={};
+    move.index = newBoard[availSpots[i]];
+    newBoard[availSpots[i]] = player;
+
+    if(player == aiPlayer){
+      var result = minimax(newBoard, huPlayer);
+      move.score = result.score;
+    }else{
+      var result = minimax(newBoard,aiPlayer);
+      move.score = result.score;
+    }
+    newBoard[availSpots[i]] = move.index;
+    move.push(move);
+  }
+
+  var bestMove;
+  if(player === aiPlayer){
+     var bestScore = -10000;
+     for(var i = 0;i < moves.length; i++){
+       if(moves[i].score > bestScore){
+         bestScore = moves[i].score;
+         bestMove = i;
+       }
+     }
+  }else{
+    var bestScore = 10000;
+    for(var i = 0;i < moves.length;i++){
+      if(moves[i].score < bestScore){
+        bestScore = moves[i];
+        bestMove = i;
+      }
+    }
+  }
+  return moves[bestMove];
+}
 
 
 
@@ -147,7 +199,7 @@ function time() {
   sg = cr.getSeconds(); //seconds 
   mn = cr.getMinutes(); //minutes
 
-   
+
   if (cs < 10) { cs = "0" + cs; }
   if (sg < 10) { sg = "0" + sg; }
   if (mn < 10) { mn = "0" + mn; }
