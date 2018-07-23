@@ -393,7 +393,7 @@ button:hover{/*hover of play button on tictac.html*/
     font-size: 50px;
     margin-left: 0%;
     margin-top: 2%;
-    border: 5px black double;
+    border: 5px rgb(238, 15, 15) double;
   }
   #h1Score{
     margin-top: -10%;
@@ -441,14 +441,14 @@ button:hover{/*hover of play button on tictac.html*/
   }		
   #cronometro { 
     position: relative;
-    border: 5px black double;
+    border: 5px rgb(238, 15, 15) double;
     width: 140px;
     text-align: center;
     background-color: rgb(35, 119, 197); 
     border-radius: 15px;
     float: right;
     margin-top:-53%;
-    margin-right: 0%;
+    margin-right: -3%;
     padding-bottom: 21px;
   }
   #clock { 
