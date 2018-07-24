@@ -92,13 +92,14 @@ function declareWinner(who) {
 function emptySquares() {
   return origBoard.filter(s => typeof s === 'number');
 }
-
+/*
 function bestSpot() {
   return emptySquares()[0];
 }
-/*function bestSpot(){
+*/
+function bestSpot(){
   return minimax(origBoard,aiPlayer).index;
-}*/
+}
 
 function checkTie() {
   if (emptySquares().length == 0) {
@@ -129,7 +130,7 @@ function minimax(newBoard, player){
     return{score : -10};
   }else if(checkWin(newBoard,aiPlayer)){
     return{score : 10};
-  }else if((availSpots.lenght === 0)){
+  }else if((availSpots.length === 0)){
     return{score : 0};
   }
   var moves=[];
@@ -162,7 +163,7 @@ function minimax(newBoard, player){
     var bestScore = 10000;
     for(var i = 0;i < moves.length;i++){
       if(moves[i].score < bestScore){
-        bestScore = moves[i];
+        bestScore = moves[i].score;
         bestMove = i;
       }
     }
